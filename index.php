@@ -70,7 +70,7 @@
                 <a class="nav-link me-2" href="#"><i class="bi bi-envelope-paper-heart-fill"></i>  Contact us</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#"><i class="bi bi-exclamation-square-fill"></i>  About</a>
+                <a class="nav-link me-2" href="#"><i class="bi bi-exclamation-square-fill"></i>   About</a>
                 </li>
             </ul>
             <div class="d-flex">
