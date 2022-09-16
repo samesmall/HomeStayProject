@@ -58,19 +58,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active me-2" aria-current="page" href="#">Home</a>
+                <a class="nav-link active me-2" aria-current="page" href="#"><i class="bi bi-house-heart-fill"></i>  Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Rooms</a>
+                <a class="nav-link me-2" href="#"><i class="bi bi-hospital-fill"></i>  Rooms</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Facilities</a>
+                <a class="nav-link me-2" href="#"><i class="bi bi-hdd-rack-fill"></i>  Facilities</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">Contact us</a>
+                <a class="nav-link me-2" href="#"><i class="bi bi-envelope-paper-heart-fill"></i>  Contact us</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link me-2" href="#">About</a>
+                <a class="nav-link me-2" href="#"><i class="bi bi-exclamation-square-fill"></i>   About</a>
                 </li>
             </ul>
             <div class="d-flex">
