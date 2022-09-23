@@ -11,7 +11,7 @@
                     <a class="nav-link active me-2" aria-current="page" href="index.php"><i class="bi bi-house-heart-fill"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#"><i class="bi bi-hospital-fill"></i> Rooms</a>
+                    <a class="nav-link me-2" href="rooms.php"><i class="bi bi-hospital-fill"></i> Rooms</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link me-2" href="facilities.php"><i class="bi bi-hdd-rack-fill"></i> Facilities</a>
