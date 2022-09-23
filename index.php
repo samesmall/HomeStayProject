@@ -158,6 +158,15 @@
                                 Room heater
                             </span>
                         </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                5 Adults
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                4 Children
+                            </span>
+                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -208,6 +217,15 @@
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap ">
                                 Room heater
+                            </span>
+                        </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                5 Adults
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                4 Children
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -262,6 +280,15 @@
                                 Room heater
                             </span>
                         </div>
+                        <div class="guests mb-4">
+                            <h6 class="mb-1">Guests</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                5 Adults
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap ">
+                                4 Children
+                            </span>
+                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -290,23 +317,23 @@
     <div class="container">
         <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/features/1.png" width="80px">
+                <img src="images/features/wifi1.png" width="80px">
                 <h5 class="mt-3">WiFi</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/features/3.png" width="80px">
+                <img src="images/features/wifi2.png" width="80px">
                 <h5 class="mt-3">STAR</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/features/1.png" width="80px">
+                <img src="images/features/wifi1.png" width="80px">
                 <h5 class="mt-3">WiFi</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/features/1.png" width="80px">
+                <img src="images/features/wifi2.png" width="80px">
                 <h5 class="mt-3">WiFi</h5>
             </div>
             <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
-                <img src="images/features/1.png" width="80px">
+                <img src="images/features/wifi1.png" width="80px">
                 <h5 class="mt-3">WiFi</h5>
             </div>
             <div class="col-lg-12 text-center mt-5">
@@ -324,7 +351,7 @@
             <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/3.png" width="30px">
+                        <img src="images/features/star.png" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
@@ -342,7 +369,7 @@
 
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/3.png" width="30px">
+                        <img src="images/features/star.png" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
@@ -360,7 +387,7 @@
 
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/3.png" width="30px">
+                        <img src="images/features/star.png" width="30px">
                         <h6 class="m-0 ms-2">Random user1</h6>
                     </div>
                     <p>
@@ -375,6 +402,8 @@
                         <i class="bi bi-star-fill text-warning"></i>
                     </div>
                 </div>
+
+            
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -427,7 +456,9 @@
     </div>
 
     <!-- footer -->
-    <? require('inc/footer.php') ?>
+        <?php require('inc/footer.php') ?>
+
+
 
 
     <!-- Initialize Swiper -->

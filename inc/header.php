@@ -17,7 +17,7 @@
                     <a class="nav-link me-2" href="facilities.php"><i class="bi bi-hdd-rack-fill"></i> Facilities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="#"><i class="bi bi-envelope-paper-heart-fill"></i> Contact us</a>
+                    <a class="nav-link me-2" href="contact.php"><i class="bi bi-envelope-paper-heart-fill"></i> Contact us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link me-2" href="about.php"><i class="bi bi-exclamation-square-fill"></i> About</a>
