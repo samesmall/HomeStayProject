@@ -110,7 +110,7 @@
         </div>
     </div>
     <!-- footer -->
-    <? require('inc/footer.php') ?>
+    <?php require('inc/footer.php') ?>
 
 
     <!-- Initialize Swiper -->

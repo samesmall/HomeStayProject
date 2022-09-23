@@ -113,7 +113,7 @@
     </div>
 
     <!-- footer -->
-    <? require('inc/footer.php') ?>
+    <?php require('inc/footer.php') ?>
 
 
     <!-- Swiper JS -->
