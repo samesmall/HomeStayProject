@@ -1,6 +1,12 @@
 <?php
 require('inc/essentials.php');
 require('inc/db_config.php');
+
+session_start();
+if((isset($_SESSION['adminLogin']) && $_SESSION['adminLogin']==true)){
+    redirect('dashboard.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,25 +49,29 @@ require('inc/db_config.php');
     if (isset($_POST['login'])) {
 
         $frm_data = filteration($_POST);
-        //echo"<h1>$frm_data[admin_name]</h1>";
-        //echo"<h1>$frm_data[admin_pass]</h1>";
+        // echo"<h1>$frm_data[admin_name]</h1>";
+        // echo"<h1>$frm_data[admin_pass]</h1>";
 
-        $query = "SELECT * FROM 'admin_cred' WHERE 'admin_name'=? AND 'admin_pass'=?";
+        $query = "SELECT * FROM `admin_cred`  WHERE `admin_name` =? AND `admin_pass`=?";
         $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
         //print_r($_POST);
-       
+
 
         $res = select($query, $values, "ss");
         //print_r($res);
         if ($res->num_rows == 1) {
-            echo "got user";
+            //echo "got user";
+            $row = mysqli_fetch_assoc($res);
+            //session_start();
+            $_SESSION['adminLogin']=true;
+            $_SESSION['adminId'] = $row['sr_no'];
+            redirect('dashboard.php');
         } else {
-            alert('error','login failed - incail Credentials!');
+            alert('error', 'login failed - incail Credentials!');
         }
     }
-
-
     ?>
+
 
 
 
