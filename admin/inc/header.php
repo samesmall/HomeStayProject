@@ -1,5 +1,5 @@
-<div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between">
-    <h3 class="mb-0">ADMIN PANEL</h3>
+<div class="container-fluid bg-dark text-light p-3 d-flex align-items-center justify-content-between sticky-top">
+    <h3 class="mb-0">SNK-FRESH</h3>
     <a href="logout.php" class="btn btn-light btn-sm">LOG OUT</a>
 </div>
 
@@ -7,8 +7,8 @@
     <nav class="navbar navbar-expand-lg navbar-dar">
         <div class="container-fluid flex-lg-column align-items-stretch">
             <h4 class="mt-2 text-light">ADMIN PANEL</h4>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#adminDropdown" aria-controls="filterDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#adminDropdown" aria-controls="adminDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"><i class="bi bi-hdd-rack-fill"></i></span>
             </button>
             <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="adminDropdown">
                 <ul class="nav nav-pills flex-column">
