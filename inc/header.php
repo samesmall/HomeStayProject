@@ -1,6 +1,7 @@
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
+        <img src="images/logo/logo.png" width="130px;" height="90px;">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SNK-HomeStay</a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,10 +25,10 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModel">
+                <button type="button" class="btn btn-sm text-white btn-danger shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModel">
                     Login
                 </button>
-                <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModel">
+                <button type="button" class="btn btn-sm text-white btn-success shadow-none" data-bs-toggle="modal" data-bs-target="#registerModel">
                     Register
                 </button>
             </div>

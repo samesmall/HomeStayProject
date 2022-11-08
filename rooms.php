@@ -11,8 +11,8 @@
 
 <body class="bg-light">
 
-    <!-- navbar -->
-    <?php require('inc/header.php') ?>
+      <!-- navbar -->
+      <?php require('inc/header.php') ?>
 
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center">OUR ROOMS</h2>
@@ -238,8 +238,8 @@
             </div>      
         </div>
     </div>
-    <!-- footer -->
-    <?php require('inc/footer.php') ?>
+   <!-- footer -->
+   <?php require('inc/footer.php') ?>
 
 
     <!-- Initialize Swiper -->
