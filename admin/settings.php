@@ -157,7 +157,7 @@ adminLogin();
                     <!-- contacts details modal -->
 
                     <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <form id="general_s_form">
 
                                 <div class="modal-content">
@@ -179,11 +179,36 @@ adminLogin();
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label fw-bold">Phone Number (with contry code)</label>
-                                                        <input type="text" name="gmap" id="gmap_inp" class="form-control shadow-none" required>
+                                                        <div class="input-group mb-3">
+                                                             <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                                             <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                             <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                                             <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label class="form-label fw-bold">Email</label>
+                                                        <input type="email" name="email" id="email_inp" class="form-control shadow-none" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    
+                                                <div class="mb-3">
+                                                        <label class="form-label fw-bold">Social Links</label>
+                                                        <div class="input-group mb-3">
+                                                             <span class="input-group-text"><i class="bi bi-facebook"></i></span>
+                                                             <input type="text" name="fb" id="fb_inp" class="form-control shadow-none" required>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                             <span class="input-group-text"><i class="bi bi-instagram"></i></span>
+                                                             <input type="text" name="insta" id="insta_inp" class="form-control shadow-none" required>
+                                                        </div>
+                                                        <div class="input-group mb-3">
+                                                             <span class="input-group-text"><i class="bi bi-twitter"></i></span>
+                                                             <input type="text" name="tw" id="tw_inp" class="form-control shadow-none" required>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
