@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2022 at 03:55 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Nov 24, 2022 at 03:09 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,6 +46,43 @@ INSERT INTO `admin_cred` (`sr_no`, `admin_name`, `admin_pass`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `carousel`
+--
+
+CREATE TABLE `carousel` (
+  `sr_no` int(11) NOT NULL,
+  `image` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_details`
+--
+
+CREATE TABLE `contact_details` (
+  `sr_no` int(11) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `gmap` varchar(100) NOT NULL,
+  `pn1` varchar(30) NOT NULL,
+  `pn2` varchar(30) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `fb` varchar(100) NOT NULL,
+  `tw` varchar(100) NOT NULL,
+  `insta` varchar(100) NOT NULL,
+  `iframe` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contact_details`
+--
+
+INSERT INTO `contact_details` (`sr_no`, `address`, `gmap`, `pn1`, `pn2`, `email`, `fb`, `tw`, `insta`, `iframe`) VALUES
+(1, ' 18 Trần Phú, Việt Nam, 4835+6Q Tuy Hòa, Phú Yên, ', 'https://goo.gl/maps/WyyEdrq2WEfqEoBe9', '+0376657843', '+0376653453', 'sipaserdsame@gmail.com', 'facebook.com', 'twitter.com', 'instagram.com/tj_webdev', 'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13297.373755145543!2d109.315384!3d13.099788!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2sus!4v1667747059946!5m2!1svi!2sus');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `settings`
 --
 
@@ -73,6 +111,12 @@ ALTER TABLE `admin_cred`
   ADD PRIMARY KEY (`sr_no`);
 
 --
+-- Indexes for table `contact_details`
+--
+ALTER TABLE `contact_details`
+  ADD PRIMARY KEY (`sr_no`);
+
+--
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
@@ -89,82 +133,15 @@ ALTER TABLE `admin_cred`
   MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `settings`
---
-ALTER TABLE `settings`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Nov 07, 2022 at 04:59 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `hbwebsite`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `contact_details`
---
-
-CREATE TABLE `contact_details` (
-  `sr_no` int(11) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `gmap` varchar(100) NOT NULL,
-  `pn1` varchar(30) NOT NULL,
-  `pn2` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `fb` varchar(100) NOT NULL,
-  `tw` varchar(100) NOT NULL,
-  `insta` varchar(100) NOT NULL,
-  `iframe` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `contact_details`
---
-
-INSERT INTO `contact_details` (`sr_no`, `address`, `gmap`, `pn1`, `pn2`, `email`, `fb`, `tw`, `insta`, `iframe`) VALUES
-(1, ' 18 Trần Phú, Việt Nam, 4835+6Q Tuy Hòa, Phú Yên, ', 'https://goo.gl/maps/WyyEdrq2WEfqEoBe9', '+0376657843', '+0376653453', 'sipaserdsame@gmail.com', 'facebook.com', 'twitter.com', 'instagram.com/tj_webdev', 'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13297.373755145543!2d109.315384!3d13.099788!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2sus!4v1667747059946!5m2!1svi!2sus');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `contact_details`
---
-ALTER TABLE `contact_details`
-  ADD PRIMARY KEY (`sr_no`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `contact_details`
 --
 ALTER TABLE `contact_details`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `settings`
+--
+ALTER TABLE `settings`
   MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
