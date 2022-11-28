@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 03:09 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Nov 28, 2022 at 02:48 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -78,7 +77,41 @@ CREATE TABLE `contact_details` (
 --
 
 INSERT INTO `contact_details` (`sr_no`, `address`, `gmap`, `pn1`, `pn2`, `email`, `fb`, `tw`, `insta`, `iframe`) VALUES
-(1, ' 18 Trần Phú, Việt Nam, 4835+6Q Tuy Hòa, Phú Yên, ', 'https://goo.gl/maps/WyyEdrq2WEfqEoBe9', '+0376657843', '+0376653453', 'sipaserdsame@gmail.com', 'facebook.com', 'twitter.com', 'instagram.com/tj_webdev', 'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13297.373755145543!2d109.315384!3d13.099788!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2sus!4v1667747059946!5m2!1svi!2sus');
+(1, ' 18 Trần Phú, Việt Nam, 4835 6Q Tuy Hòa, Phú Yên, ', 'https://goo.gl/maps/WyyEdrq2WEfqEoBe9', ' 0376657848', ' 037665345', 'sipaserdsame@gmail.com', 'facebook.com', 'twitter.com', 'instagram.com/tj_webdev', 'https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13297.373755145543!2d109.315384!3d13.099788!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2sus!4v1667747059946!5m2!1svi!2sus');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facilities`
+--
+
+CREATE TABLE `facilities` (
+  `id` int(11) NOT NULL,
+  `icon` varchar(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `features`
+--
+
+CREATE TABLE `features` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `features`
+--
+
+INSERT INTO `features` (`id`, `name`) VALUES
+(23, 'asas'),
+(28, 'sdasad'),
+(29, 'qeqw'),
+(30, 'kitchen');
 
 -- --------------------------------------------------------
 
@@ -98,17 +131,60 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`sr_no`, `site_title`, `site_about`, `shutdown`) VALUES
-(1, 'Fresh Homestay', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nam maiores velit laudantium, vitae explicabo nisi a, saepe autem ad reiciendis quasi maxime. Illum quaerat sit fuga unde a officia.', 1);
+(1, 'SNK_homestay', 'This is my homehomestay', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_cred`
+--
+
+CREATE TABLE `user_cred` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(120) NOT NULL,
+  `phonenum` varchar(100) NOT NULL,
+  `pincode` int(11) NOT NULL,
+  `dob` date NOT NULL,
+  `profile` varchar(100) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `is_verified` int(11) NOT NULL DEFAULT 0,
+  `token` varchar(200) DEFAULT NULL,
+  `t_expire` date DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `datentime` datetime NOT NULL DEFAULT current_timestamp(),
+  `email` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_queries`
+--
+
+CREATE TABLE `user_queries` (
+  `sr_no` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `subject` varchar(250) NOT NULL,
+  `message` varchar(500) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp(),
+  `seen` tinyint(4) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user_queries`
+--
+
+INSERT INTO `user_queries` (`sr_no`, `name`, `email`, `subject`, `message`, `date`, `seen`) VALUES
+(8, 'same', 'sipaserdsame@gmail.com', 'room', 'check in', '2022-11-25', 0),
+(9, 'sally', 'admin@gmail.com', 'room', 'check out', '2022-11-25', 0),
+(10, 'souk', 'souksavan@gmail.com', 'room', 'asdsads', '2022-11-25', 0),
+(12, 'chilasak', 'chilasak@gmail.com', 'dat phong', 'asdasdasda', '2022-11-25', 0);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin_cred`
---
-ALTER TABLE `admin_cred`
-  ADD PRIMARY KEY (`sr_no`);
 
 --
 -- Indexes for table `contact_details`
@@ -117,20 +193,32 @@ ALTER TABLE `contact_details`
   ADD PRIMARY KEY (`sr_no`);
 
 --
--- Indexes for table `settings`
+-- Indexes for table `facilities`
 --
-ALTER TABLE `settings`
+ALTER TABLE `facilities`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `features`
+--
+ALTER TABLE `features`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_cred`
+--
+ALTER TABLE `user_cred`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_queries`
+--
+ALTER TABLE `user_queries`
   ADD PRIMARY KEY (`sr_no`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin_cred`
---
-ALTER TABLE `admin_cred`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contact_details`
@@ -139,10 +227,28 @@ ALTER TABLE `contact_details`
   MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `settings`
+-- AUTO_INCREMENT for table `facilities`
 --
-ALTER TABLE `settings`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `facilities`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `features`
+--
+ALTER TABLE `features`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `user_cred`
+--
+ALTER TABLE `user_cred`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user_queries`
+--
+ALTER TABLE `user_queries`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

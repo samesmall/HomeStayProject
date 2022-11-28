@@ -8,18 +8,18 @@ adminLogin();
 
 if(isset($_POST['add_image']))
 {
+  $frm_data = filteration($_POST);
    $img_r = uploadImage($_FILES['picture'],CAROUSEL_FOLDER);
-
    if($img_r == 'inv_img'){
-      echo $img_r;
+    echo $img_r;
    }else if($img_r == 'inv_size'){
     echo $img_r;
    }else if($img_r == 'upd_failed'){
     echo $img_r;
    }else{
-     $q = "INSERT INTO `carousel`(`image`) VALUES (?)";
+     $sql ="INSERT INTO `carousel` (`image`) VALUES (?)";
      $values = [$img_r];
-     $res = insert($q,$values,'s');
+     $res = insert($sql,$values,'s');
      echo $res;
    }
 }
@@ -33,7 +33,7 @@ if(isset($_POST['get_carousel']))
     {
         $path = ABOUT_IMG_PATH;
         echo <<<data
-          <div class="col-md-2 mb-3">
+          <div class="col-md-4 mb-3">
           <div class="card bg-dark text-white">
           <img src="$path$row[image]" class="card-img">
              <div class="card-img-overlay text-end">
