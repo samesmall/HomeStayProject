@@ -89,7 +89,7 @@
                 }
                 get_general();
             }
-            xhr.send('upd_shutdown' +val);
+            xhr.send('upd_shutdown='+val);
         }
 
         function get_contacts() {

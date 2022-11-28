@@ -20,6 +20,9 @@
                         <a class="nav-link text-white" href="#">Rooms</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="features_facilities.php">Features & Facilities</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="user_queries.php">user_queries</a>
                     </li>
                     <li class="nav-item">
