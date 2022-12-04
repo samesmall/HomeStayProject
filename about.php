@@ -23,20 +23,16 @@
         <h2 class="fw-bold h-font text-center">about us</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Iure dicta molestiae repudiandae <br> magnam quidem qui
-            assumenda eos fuga commodi eligendi.
+            A wonderful Home stay, that combines a perfect location <br> and a beautiful, historic place.
         </p>
     </div>
     <div class="container">
         <div class="row justify-content-between align-item-center">
             <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1  order-2">
-                <h3 class="mb-3">Lorem ipsum dolor sit amet consectetur</h3>
+                <h3 class="mb-3">Our story</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Numquam dolorum cumque, quo cum suscipit Lorem ipsum dolor sit amet.
-                    Esse non enim eum odio laborum,Lorem ipsum dolor sit amet consectetur.
-                    quia incidunt omnis error a perspiciatis velit molestias similique?
+                    Founded in 2013 by travel industry veterans Same and Noy (Lao Partners & A Star Hostels Group), with a vision of taking an offline industry online and making homestays and private room rental a popular accommodation choice. <br>
+                    When travel to a new place, besides getting to know the city, you will like to get out of the tourist area and get to know places that only local people know about and go to, like neture, parks, beaches and feel a little more of the local culture. You know the gems only the locals know about? That's where I like to go. 
                 </p>
             </div>
             <div class="col-lg-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
@@ -49,25 +45,25 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4 px-4">
                 <div class="bg-white rouded shadow p-4 border-top border-4 text-center box">
-                    <img src="images/about/8.jpg" width="70px">
+                    <img src="images/about/hotel.svg" width="70px">
                     <h4 class="mt-3">100+ ROOMS</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 px-4">
                 <div class="bg-white rouded shadow p-4 border-top border-4 text-center box">
-                    <img src="images/about/8.jpg" width="70px">
+                    <img src="images/about/customers.svg" width="70px">
                     <h4 class="mt-3">200+ CUSTOMER</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 px-4">
                 <div class="bg-white rouded shadow p-4 border-top border-4 text-center box">
-                    <img src="images/about/8.jpg" width="70px">
+                    <img src="images/about/rating.svg" width="70px">
                     <h4 class="mt-3">150+ REVIEWS</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 px-4">
                 <div class="bg-white rouded shadow p-4 border-top border-4 text-center box">
-                    <img src="images/about/8.jpg" width="70px">
+                    <img src="images/about/staff.svg" width="70px">
                     <h4 class="mt-3">200+ STAFFS</h4>
                 </div>
             </div>
@@ -80,31 +76,31 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/1.jpg" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/2.jpg" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/3.jpg" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/IMG_11892.png" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/IMG_16569.jpeg" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/IMG_42663.png" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
                 <div class="swiper-slide bg-white text-cewnter overflow-hidden rounded">
-                    <img src="images/about/8.jpg" class="w-100">
+                    <img src="images/about/IMG_65019.png" class="w-100">
                     <h5 class="mt-2">Random name</h5>
                 </div>
             </div>

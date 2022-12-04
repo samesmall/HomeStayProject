@@ -18,9 +18,7 @@
         <h2 class="fw-bold h-font text-center">CONTACT US</h2>
         <div class="h-line bg-dark"></div>
         <p class="text-center mt-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Iure dicta molestiae repudiandae <br> magnam quidem qui
-            assumenda eos fuga commodi eligendi.
+            A wonderful Home stay, that combines a perfect location <br> and a beautiful, historic city.
         </p>
     </div>
 
@@ -28,12 +26,12 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
-                <iframe class="w-100 rounded mb-4" height="320px" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15543.843241811737!2d109.3173248!3d13.10166925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1663430775376!5m2!1svi!2s"></iframe>
-                <h5>Address</h5>
-                <a href="https://goo.gl/maps/WyyEdrq2WEfqEoBe9" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2">
-                 <i class="bi bi-geo-alt-fill"></i>  18 Trần Phú, Việt Nam, 4835+6Q Tuy Hòa, Phú Yên, Việt Nam
-                </a>
-                <h5 class="mt-4">Call us</h5>
+                    <iframe class="w-100 rounded mb-4" height="320px" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15543.843241811737!2d109.3173248!3d13.10166925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1663430775376!5m2!1svi!2s"></iframe>
+                    <h5>Address</h5>
+                    <a href="https://goo.gl/maps/WyyEdrq2WEfqEoBe9" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2">
+                        <i class="bi bi-geo-alt-fill"></i> 18 Trần Phú, Việt Nam, 4835+6Q Tuy Hòa, Phú Yên, Việt Nam
+                    </a>
+                    <h5 class="mt-4">Call us</h5>
                     <a href="tel: +0376657843" class="d-inline-block mb-2 text-decoration-none text-dark">
                         <i class="bi bi-telephone-fill"></i>+0376657843
                     </a>
@@ -41,27 +39,27 @@
                     <a href="tel: +0376653453" class="d-inline-block  text-decoration-none text-dark">
                         <i class="bi bi-telephone-fill"></i>+0376653453
                     </a>
-                    
+
                     <h5 class="mt-4">Email</h5>
                     <a href="" class="d-inline-block text-decoration-none text-dark mb-2">
-                    <i class="bi bi-envelope-fill"></i> sipaserdsame@gmail.com
+                        <i class="bi bi-envelope-fill"></i> sipaserdsame@gmail.com
                     </a>
 
                     <h5 class="mt-4">Follow us</h5>
                     <a href="#" class="d-inline-block  text-dark fs-5 me-2">
-                            <i class="bi bi-twitter me-1"></i>
+                        <i class="bi bi-twitter me-1"></i>
                     </a>
                     <a href="#" class="d-inline-block  text-dark fs-5 me-2">
-                            <i class="bi bi-facebook me-1"></i>
+                        <i class="bi bi-facebook me-1"></i>
                     </a>
                     <a href="#" class="d-inline-block  text-dark fs-5">
-                            <i class="bi bi-instagram me-1"></i>
-                    </a> 
+                        <i class="bi bi-instagram me-1"></i>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <form method="POST"> 
+                    <form method="POST">
                         <h5>Send a message</h5>
                         <div class="mb-3">
                             <label class="form-label" style="font-weight: 500;">Name</label>
@@ -79,26 +77,25 @@
                             <label class="form-label" style="font-weight: 500;">Message</label>
                             <textarea name="message" required class="form-control shadow-none" rows="5" style="resize: none;"></textarea>
                         </div>
-                        <button type="submit" name="send" class="btn text-white custom-bg mt-3">SEND</button>     
+                        <button type="submit" name="send" class="btn text-white custom-bg mt-3">SEND</button>
                     </form>
-                        
+
                 </div>
             </div>
         </div>
     </div>
-    <?php 
-    if(isset($_POST['send']))
-    {
-      $frm_data = filteration($_POST);
-      $q = "INSERT INTO `user_queries`( `name`, `email`, `subject`, `message`) VALUES (?,?,?,?)";
-      $values = [$frm_data['name'],$frm_data['email'],$frm_data['subject'],$frm_data['message']];
+    <?php
+    if (isset($_POST['send'])) {
+        $frm_data = filteration($_POST);
+        $q = "INSERT INTO `user_queries`( `name`, `email`, `subject`, `message`) VALUES (?,?,?,?)";
+        $values = [$frm_data['name'], $frm_data['email'], $frm_data['subject'], $frm_data['message']];
 
-      $res = insert($q,$values,'ssss');
-      if($res==1){
-        alert('success','Mail sent!');
-      }else{
-        alert('error','Server Down! Try again later.');
-      }
+        $res = insert($q, $values, 'ssss');
+        if ($res == 1) {
+            alert('success', 'Mail sent!');
+        } else {
+            alert('error', 'Server Down! Try again later.');
+        }
     }
     ?>
     <!-- footer -->

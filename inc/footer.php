@@ -3,9 +3,7 @@
       <div class="col-lg-4 p-4">
          <h3 class="h-font fw-bold fs-3 mb-2">FRESH HOMESTAY</h3>
          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Blanditiis nam maiores velit laudantium, vitae explicabo nisi a,
-            saepe autem ad reiciendis quasi maxime. Illum quaerat sit fuga unde a officia.
+         Founded in 2013 by travel industry veterans Same and Noy <br>(Lao Partners & A Star Home stay Group), with a vision of taking an offline industry online and making homestays and private room rental a popular accommodation choice.
          </p>
       </div>
       <div class="col-lg-4 p-4">

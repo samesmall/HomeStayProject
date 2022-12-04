@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 02:48 AM
+-- Generation Time: Dec 04, 2022 at 05:09 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hbwebsite`
+-- Database: `homestayproject`
 --
 
 -- --------------------------------------------------------
@@ -52,6 +52,19 @@ CREATE TABLE `carousel` (
   `sr_no` int(11) NOT NULL,
   `image` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `carousel`
+--
+
+INSERT INTO `carousel` (`sr_no`, `image`) VALUES
+(7, 'IMG_25898.jpg'),
+(8, 'IMG_19690.jpg'),
+(9, 'IMG_84807.jpg'),
+(11, 'IMG_95658.jpg'),
+(12, 'IMG_62666.jpg'),
+(13, 'IMG_44397.jpg'),
+(14, 'IMG_18028.jpg');
 
 -- --------------------------------------------------------
 
@@ -108,10 +121,10 @@ CREATE TABLE `features` (
 --
 
 INSERT INTO `features` (`id`, `name`) VALUES
-(23, 'asas'),
-(28, 'sdasad'),
-(29, 'qeqw'),
-(30, 'kitchen');
+(36, 'SPA'),
+(38, 'YOGA'),
+(39, 'BEGERY'),
+(40, 'FREE WIFI');
 
 -- --------------------------------------------------------
 
@@ -131,7 +144,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`sr_no`, `site_title`, `site_about`, `shutdown`) VALUES
-(1, 'SNK_homestay', 'This is my homehomestay', 0);
+(1, 'SNK_homestay', 'This is my homehomestay ', 1);
 
 -- --------------------------------------------------------
 
@@ -180,11 +193,18 @@ INSERT INTO `user_queries` (`sr_no`, `name`, `email`, `subject`, `message`, `dat
 (8, 'same', 'sipaserdsame@gmail.com', 'room', 'check in', '2022-11-25', 0),
 (9, 'sally', 'admin@gmail.com', 'room', 'check out', '2022-11-25', 0),
 (10, 'souk', 'souksavan@gmail.com', 'room', 'asdsads', '2022-11-25', 0),
-(12, 'chilasak', 'chilasak@gmail.com', 'dat phong', 'asdasdasda', '2022-11-25', 0);
+(12, 'chilasak', 'chilasak@gmail.com', 'dat phong', 'asdasdasda', '2022-11-25', 0),
+(17, 'LOANPIA', 'loanpia@gmail.com', 'dat phong', 'tôi muốn đặt phòng', '2022-12-04', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `carousel`
+--
+ALTER TABLE `carousel`
+  ADD PRIMARY KEY (`sr_no`);
 
 --
 -- Indexes for table `contact_details`
@@ -221,6 +241,12 @@ ALTER TABLE `user_queries`
 --
 
 --
+-- AUTO_INCREMENT for table `carousel`
+--
+ALTER TABLE `carousel`
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- AUTO_INCREMENT for table `contact_details`
 --
 ALTER TABLE `contact_details`
@@ -236,7 +262,7 @@ ALTER TABLE `facilities`
 -- AUTO_INCREMENT for table `features`
 --
 ALTER TABLE `features`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `user_cred`
@@ -248,7 +274,7 @@ ALTER TABLE `user_cred`
 -- AUTO_INCREMENT for table `user_queries`
 --
 ALTER TABLE `user_queries`
-  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `sr_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
