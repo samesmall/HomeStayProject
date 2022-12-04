@@ -1,15 +1,15 @@
 <?php
     //frontend  purpose data
-    define('SITE_URL','http://127.0.0.1/homestayproject/');
+    define('SITE_URL','http://127.0.0.1/HomeStayProject/');
     define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
-    define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
-    define('FACILITIES_IMG_PATH',SITE_URL.'images/facilities/');
+    define('CAROUSEL_IMG_PATH','\images/carousel/');
+    define('FACILITIES_IMG_PATH','\images/facilities/');
 
 
-    define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/homestayproject/images/');
+    define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'\images');
     define('ABOUT_FOLDER','about/');
-    define('CAROUSEL_FOLDER','carousel/');
-    define('FACILITIES_FOLDER','facilities/');
+    define('CAROUSEL_FOLDER','\carousel/');
+    define('FACILITIES_FOLDER','\facilities/');
     define('USERS_FOLDER','users/');
 
     function adminLogin(){
@@ -46,8 +46,7 @@
        if(!in_array($img_mime,$valid_mime)){
         return 'inv_img';
        }
-       else 
-       if(($image['size']/(1024*1024))>2){
+       else if(($image['size']/(1024*1024))>2){
         return 'inv_size';
        }
        else{
