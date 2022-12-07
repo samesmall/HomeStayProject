@@ -47,6 +47,7 @@
                                    $row[description]
                                 </p>
                         </div>
+
                     </div>
                   data;
               }
