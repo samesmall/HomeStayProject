@@ -10,7 +10,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
 <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <img src="images/logo/logo.png" width="130px;" height="90px;">
-        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SNK-HomeStay</a>
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SNK-HOMESTAY</a>
         <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -88,10 +88,10 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                    <!-- <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
                         Note: Your details must match with your ID (passport, driving license, etc.)
                         that will be required during check-in.
-                    </span>
+                    </span> -->
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 ps-0 mb-3">
@@ -110,18 +110,18 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                                 <label class="form-label">Picture</label>
                                 <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
                             </div>
-                            <div class="col-md-12 p-0 mb-3">
+                            <!-- <div class="col-md-12 p-0 mb-3">
                                 <label class="form-label">Address</label>
                                 <textarea name="address" class="form-control" rows="1" required></textarea>
-                            </div>
-                            <div class="col-md-6 ps-0 mb-3">
+                            </div> -->
+                            <!-- <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Pincode</label>
                                 <input name="pincode" type="number" class="form-control shadow-none" required>
-                            </div>
-                            <div class="col-md-6 p-0 ">
+                            </div> -->
+                            <!-- <div class="col-md-6 p-0 ">
                                 <label class="form-label">Date of birth</label>
                                 <input name="dob" type="date" class="form-control shadow-none" required>
-                            </div>
+                            </div> -->
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
                                 <input name="pass" type="password" class="form-control shadow-none" required>

@@ -162,7 +162,7 @@ if (isset($_GET['del'])) {
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold">Icon</label>
-                            <input type="file" name="facility_icon" accept=".svg" class="form-control shadow-none" required>
+                            <input type="file" name="facility_icon" accept=".svg, .png" class="form-control shadow-none" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-bold">Description</label>
@@ -182,6 +182,8 @@ if (isset($_GET['del'])) {
     <?php require('inc/scripts.php') ?>
     <script src="scripts/features_facilities.js"></script>
      
+
+   
 </body>
 
 </html>
