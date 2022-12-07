@@ -34,45 +34,19 @@
         <!-- Swiper -->
         <div class="swiper swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="images/carousel/1.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/2.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/3.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/4.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/5.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/6.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/7.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/8.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/9.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/10.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/11.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/12.jpg" class="w-100 d-block" height="350px;" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/carousel/13.jpg" class="w-100 d-block" height="350px;" />
-                </div>
+                <?php 
+                 $res = selectAll('carousel');
+
+                 while($row = mysqli_fetch_assoc($res))
+                 {
+                     $path = CAROUSEL_IMG_PATH;
+                     echo <<<data
+                     <div class="swiper-slide">
+                     <img src="$path$row[image]" class="w-100 d-block" height="350px;" />
+                    </div>
+                 data;
+                 }
+                ?>
             </div>
         </div>
     </div>
