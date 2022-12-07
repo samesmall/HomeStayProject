@@ -75,7 +75,7 @@
 
     function uploadSVGImage($image,$folder)
     {
-        $valid_mime = ['image/svg+xml'];
+        $valid_mime = ['image/svg+xml','image/png'];
         $img_mime = $image['type'];
         if(!in_array($img_mime,$valid_mime)){
          return 'inv_img';
