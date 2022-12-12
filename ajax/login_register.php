@@ -15,7 +15,7 @@ if(isset($_POST['register'])){
 
     //check user exit or not 
     $u_exist = select("SELECT * FROM `user_cred` WHERE `email` = ? AND `phonenum` = ? LIMIT 1",
-    [$data['email']],[$data['phonenum']],"ss");
+    [$data['email'],$data['phonenum']],"ss");
 
     if(mysqli_num_rows($u_exist)!=0){
         $u_exist_fetch = mysqli_fetch_assoc($u_exist);
@@ -36,12 +36,12 @@ if(isset($_POST['register'])){
     }
 
     $enc_pass = password_hash($data['pass'],PASSWORD_BCRYPT);
-    $query = "INSERT INTO `user_cred`(`name`,`email`, `address`, `phonenum`, `pincode`, `dob`,
-     `profile`, `password`, `token`) VALUES (?,?,?,?,?,?,?,?,?)";
+    $query = "INSERT INTO `user_cred`(`name`,`email`,`phonenum`,
+     `profile`, `password`, `token`) VALUES (?,?,?,?,?,?)";
     
-    $values = [$data['name'],$data['email'],$data['address'],$data['phonenum'],$data['pincode'],$data['dob'],
+    $values = [$data['name'],$data['email'],$data['phonenum'],
     $img,$enc_pass,$token];
-    if(insert($query,$values,'sssssssss')){
+    if(insert($query,$values,'ssssss')){
         echo 1;
     }else{
         echo 'upd_failed';

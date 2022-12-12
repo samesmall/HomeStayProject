@@ -4,13 +4,14 @@
     define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
     define('CAROUSEL_IMG_PATH','\images/carousel/');
     define('FACILITIES_IMG_PATH','\images/facilities/');
-
+    define('ROOMS_IMG_PATH','\images/rooms/');
 
     define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'\images');
     define('ABOUT_FOLDER','about/');
     define('CAROUSEL_FOLDER','\carousel/');
     define('FACILITIES_FOLDER','\facilities/');
-    define('USERS_FOLDER','users/');
+    define('ROOMS_FOLDER','\rooms/');
+    define('USERS_FOLDER','\users/');
 
     function adminLogin(){
         session_start();
