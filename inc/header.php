@@ -110,18 +110,6 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                                 <label class="form-label">Picture</label>
                                 <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
                             </div>
-                            <!-- <div class="col-md-12 p-0 mb-3">
-                                <label class="form-label">Address</label>
-                                <textarea name="address" class="form-control" rows="1" required></textarea>
-                            </div> -->
-                            <!-- <div class="col-md-6 ps-0 mb-3">
-                                <label class="form-label">Pincode</label>
-                                <input name="pincode" type="number" class="form-control shadow-none" required>
-                            </div> -->
-                            <!-- <div class="col-md-6 p-0 ">
-                                <label class="form-label">Date of birth</label>
-                                <input name="dob" type="date" class="form-control shadow-none" required>
-                            </div> -->
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
                                 <input name="pass" type="password" class="form-control shadow-none" required>
