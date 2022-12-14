@@ -113,11 +113,7 @@
         if($ext == 'png' || $ext == 'PNG'){
             $img = imagecreatefrompng($image['tmp_name']);
         }
-        else if($ext == 'webp' || $ext == 'WEBP'){
-            $img = imagecreatefromwbmp($image['tmp_name']);
-        }else{
-            $img = imagecreatefromjpeg($image['tmp_name']);
-        }
+       
 
          if(imagejpeg($img,$img_path,75)){
             return $rname;

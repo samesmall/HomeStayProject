@@ -102,7 +102,7 @@ function submit_edit_room() {
     xhr.open("POST", "ajax/rooms.php", true);
 
     xhr.onload = function() {
-        // console.log(this.responseText);
+        console.log(this.responseText);
         var myModal = document.getElementById("edit-room");
         var modal = bootstrap.Modal.getInstance(myModal);
         modal.hide();
@@ -168,7 +168,7 @@ function edit_details(id) {
 
 
     }
-    xhr.send('get_room=' + id);
+    xhr.send('get_room='+id);
 }
 
 edit_room_form.addEventListener('submit', function(e) {

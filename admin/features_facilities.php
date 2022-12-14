@@ -65,7 +65,7 @@ if (isset($_GET['del'])) {
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4">FEATURES & FACILITIES</h3>
+            <h3 class="mb-4"><i class="bi bi-card-checklist text-primary"></i> FEATURES & FACILITIES</h3>
 
             <!-- features section -->
             <div class="card border-0 shadow-sm mb-4">

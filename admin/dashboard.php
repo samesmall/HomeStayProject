@@ -22,6 +22,7 @@ adminLogin();
     <div class="container-fluid" id="main-content">
         <div class="row">
             <div class="col-lg-10 ms-auto p-4 overflow-hidden">
+            <h3 class="mb-4"><i class="bi bi-table text-primary"></i> DASHBOARD</h3>
             </div>
         </div>
     </div>
