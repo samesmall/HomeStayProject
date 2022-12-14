@@ -73,7 +73,7 @@ if(isset($_GET['del']))
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4">USER QUERIES</h3>
+            <h3 class="mb-4"><i class="bi bi-people text-primary"></i> USER QUERIES</h3>
 
             <!-- carousel section -->
             <div class="card border-0 shadow-sm mb-4">

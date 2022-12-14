@@ -25,14 +25,13 @@ adminLogin();
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4">ROOMS</h3>
+            <h3 class="mb-4"><i class="bi bi-hospital text-primary"></i> ROOMS</h3>
 
             <!-- features section -->
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-body">
 
                     <div class="text-end mb-3">
-                        <h5 class="card-title m-0">Features</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#add-room">
                             <i class="bi bi-plus-square"></i> Add
                         </button>

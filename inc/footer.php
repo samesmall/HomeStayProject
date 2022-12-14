@@ -31,7 +31,7 @@
 
 <h6 class="text-center bg-dark text-white p-3 m-0">Designed and Developed by SNK-Solution</h6>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
 <script> 
     function alert(type,msg,position='body'){
         let bs_class = (type == 'success') ? 'alert-success' : 'alert-danger';
@@ -66,7 +66,7 @@
       data.append('phonenum',register_form.elements['phonenum'].value);
       data.append('pass',register_form.elements['pass'].value);
       data.append('cpass',register_form.elements['cpass'].value);
-      data.append('profile',register_form.elements['profile'].files[0]);
+      //data.append('profile',register_form.elements['profile'].files[0]);
       data.append('register','');
 
       var myModal = document.getElementById('registerModal');
@@ -78,7 +78,6 @@
             
 
             xhr.onload = function() {
-               console.log(this.responseText);
                if(this.responseText == 'pass_mismatch'){
                   alert('error',"Password Missmatch");
                }else if(this.responseText == 'email_already'){
@@ -87,12 +86,12 @@
                else if(this.responseText == 'phone_already'){
                   alert('error',"Phone is already registered!");
                }
-               else if(this.responseText == 'inv_img'){
-                  alert('error',"Only JPG,WEBP & PNG image are allowed!");
-               }
-               else if(this.responseText == 'upd_failed'){
-                  alert('error',"Image upload failed!");
-               }
+               // else if(this.responseText == 'inv_img'){
+               //    alert('error',"Only JPG,WEBP & PNG image are allowed!");
+               // }
+               // else if(this.responseText == 'upd_failed'){
+               //    alert('error',"Image upload failed!");
+               // }
                else if(this.responseText == 'ins_failed'){
                   alert('error',"Registation failed! Server Down!");
                }else{
@@ -102,5 +101,43 @@
       }
       xhr.send(data);
    });
+
+   let forgot_form = document.getElementById('forgot-form');
+   forgot_form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      let data = new FormData();
+      data.append('email',forgot_form.elements['email'].value);
+      data.append('forgot_pass','');
+
+      var myModal = document.getElementById('forgotModal');
+      var modal = bootstrap.Modal.getInstance(myModal);
+      modal.hide();
+
+      let xhr = new XMLHttpRequest();
+            xhr.open("POST", "ajax/login_register.php", true);
+            
+
+            xhr.onload = function() {
+               console.log(this.responseText);
+               // if(this.responseText == 'inv_email_mob'){
+               //    alert('error',"Invalid Email or Mobile Number!");
+               // }
+               // else if(this.responseText == 'not_verified'){
+               //    alert('error',"Email is not verified!");
+               // }
+               // else if(this.responseText == 'inactive'){
+               //    alert('error',"Account Suspended! Please contact Admin.");
+               // }
+               //else 
+               if(this.responseText == 'invalid_pass'){
+                  alert('error',"Incorrect Password!");
+               }else{
+               window.location = window.location.pathname;
+            }
+      }
+      xhr.send(data);
+   });
+
+   //setActive();
    
 </script>
