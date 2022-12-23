@@ -5,6 +5,7 @@
     define('CAROUSEL_IMG_PATH','\images/carousel/');
     define('FACILITIES_IMG_PATH','\images/facilities/');
     define('ROOMS_IMG_PATH','\images/rooms/');
+    
 
     define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'\images');
     define('ABOUT_FOLDER','about/');
@@ -112,6 +113,11 @@
 
         if($ext == 'png' || $ext == 'PNG'){
             $img = imagecreatefrompng($image['tmp_name']);
+        }
+        else if($ext == 'webp' || $ext == 'WEBP'){
+            $img = imagecreatefromwebp($image['tmp_name']);
+        }else{
+            $img = imagecreatefromjpeg($image['tmp_name']);
         }
        
 
