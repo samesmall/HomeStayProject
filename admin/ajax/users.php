@@ -19,10 +19,10 @@ if(isset($_POST['get_users']))
     $del_btn = "<button type='button' onclick='remove_user($row[id])' class='btn btn-danger shadow-none btn-sm'>
     <i class='bi bi-trash'></i>
     </button>";
-    $verified = "<span class='badge bg-warning'><i class='bi bi-x-lg'></i></span>";
+    $verified = "<button onclick='toggle_verify($row[id],0)' class='btn btn-sm btn-success text-white shadow-none'><i class='bi bi-check-lg'></i></button>";
 
-    if($row['is_verified']){
-        $verified = "<span class='badge bg-success'><i class='bi bi-check-lg'></i></span>";
+    if(!$row['is_verified']){
+        $verified = "<button onclick='toggle_verify($row[id],1)' class='btn btn-sm btn-danger text-white shadow-none'><i class='bi bi-x-lg'></i></button>";
         $del_btn ="";
     }
 
@@ -54,6 +54,19 @@ if(isset($_POST['toggle_status']))
   $frm_data = filteration($_POST);
   $q = "UPDATE `user_cred` SET `status`=? WHERE `id`=?";
   $v = [$frm_data['value'],$frm_data['toggle_status']];
+
+  if(update($q,$v,'ii')){
+    echo 1;
+  }else{
+    echo 0;
+  }
+}
+
+if(isset($_POST['toggle_verify']))
+{
+  $frm_data = filteration($_POST);
+  $q = "UPDATE `user_cred` SET `is_verified`=? WHERE `id`=?";
+  $v = [$frm_data['value'],$frm_data['toggle_verify']];
 
   if(update($q,$v,'ii')){
     echo 1;
