@@ -1,14 +1,11 @@
 <?php 
-// require('admin/inc/db_config.php');
-// require('admin/inc/essentials.php');
-
 
 $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
 $values = [1];
 $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i')); 
 ?>
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
+<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
     <div class="container-fluid">
         <img src="images/logo/logo.png" width="130px;" height="90px;">
         <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">SNK-HOMESTAY</a>
@@ -18,19 +15,19 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active me-2" aria-current="page" href="index.php"><i class="bi bi-house-heart-fill"></i> Home</a>
+                    <a class="nav-link me-2 border rounded btn btn-sm" aria-current="page" href="index.php"><i class="bi bi-house-heart-fill"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="rooms.php"><i class="bi bi-hospital-fill"></i> Rooms</a>
+                    <a class="nav-link  border rounded me-2 btn btn-sm" href="rooms.php"><i class="bi bi-hospital-fill"></i> Rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="facilities.php"><i class="bi bi-hdd-rack-fill"></i> Facilities</a>
+                    <a class="nav-link  border rounded me-2 btn btn-sm" href="facilities.php"><i class="bi bi-hdd-rack-fill"></i> Facilities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="contact.php"><i class="bi bi-envelope-paper-heart-fill"></i> Contact us</a>
+                    <a class="nav-link border rounded me-2 btn btn-sm" href="contact.php"><i class="bi bi-envelope-paper-heart-fill"></i> Contact us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-2" href="about.php"><i class="bi bi-exclamation-square-fill"></i> About</a>
+                    <a class="nav-link border rounded me-2 btn btn-sm" href="about.php"><i class="bi bi-exclamation-square-fill"></i> About</a>
                 </li>
             </ul>
             <div class="d-flex">
@@ -162,10 +159,10 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                                 <label class="form-label">Phone Number</label>
                                 <input name="phonenum" type="text" class="form-control shadow-none" required>
                             </div>
-                            <!-- <div class="col-md-6 p-0 ">
+                            <div class="col-md-6 p-0 ">
                                 <label class="form-label">Picture</label>
                                 <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
-                            </div> -->
+                            </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
                                 <input name="pass" type="password" class="form-control shadow-none" required>

@@ -14,7 +14,7 @@ if(isset($_POST['register'])){
     }
 
     //check user exit or not 
-    $u_exist = select("SELECT * FROM `user_cred` WHERE `email` = ? AND `phonenum` = ? LIMIT 1",
+    $u_exist = select("SELECT * FROM `user_cred` WHERE `email` = ? OR `phonenum` = ? LIMIT 1",
     [$data['email'],$data['phonenum']],"ss");
 
     if(mysqli_num_rows($u_exist)!=0){
@@ -24,16 +24,16 @@ if(isset($_POST['register'])){
     }
 
     //upload user image to server
-    // $img = uploadUserImage($_FILES['profile']);
+    $img = uploadUserImage($_FILES['profile']);
 
-    // if($img == 'inv_img'){
-    //     echo 'inv_img';
-    //     exit;
-    // }
-    // else if ($img == 'upd_failed'){
-    //     echo 'upd_failed';
-    //     exit;
-    // }
+    if($img == 'inv_img'){
+        echo 'inv_img';
+        exit;
+    }
+    else if ($img == 'upd_failed'){
+        echo 'upd_failed';
+        exit;
+    }
 
     $enc_pass = password_hash($data['pass'],PASSWORD_BCRYPT);
     $query = "INSERT INTO `user_cred`(`name`,`email`,`phonenum`, `password`) VALUES (?,?,?,?)";
@@ -54,15 +54,15 @@ if(isset($_POST['register'])){
         $u_exist = select("SELECT * FROM `user_cred` WHERE `email` = ? AND `phonenum` = ? LIMIT 1",
         [$data['email_mob'],$data['email_mob']],"ss");
 
-        // if(mysqli_num_rows($u_exist)==0){
-        //   echo 'inv_email_mob';
-        // }else{
-        // $u_fetch = mysqli_fetch_assoc($u_exist);
-        // if($u_fetch['is_verified']==0){
-        //     echo 'not_verifiled';
-        // }else if($u_fetch['status']==0){
-        //     echo 'inactive';
-        // }else{
+        if(mysqli_num_rows($u_exist)==0){
+          echo 'inv_email_mob';
+        }else{
+        $u_fetch = mysqli_fetch_assoc($u_exist);
+        if($u_fetch['is_verified']==0){
+            echo 'not_verifiled';
+        }else if($u_fetch['status']==0){
+            echo 'inactive';
+        }else{
             if(!password_verify($data['pass'],$u_fetch['password'])){
                 echo 'invalid_pass';
             }else{
@@ -70,13 +70,13 @@ if(isset($_POST['register'])){
                 $_SESSION['login'] = true;
                 $_SESSION['uId'] = $u_fetch['id'];
                 $_SESSION['uName'] = $u_fetch['name'];
-                // $_SESSION['uPic'] = $u_fetch['profile'];
+                $_SESSION['uPic'] = $u_fetch['profile'];
                 $_SESSION['uPhone'] = $u_fetch['phonenum'];
                 echo 1;
             }
         }
-    //}
-    //}
+    }
+    }
 
     if(isset($_POST['forgot_pass']))
     {
