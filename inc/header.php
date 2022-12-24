@@ -38,7 +38,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                     <div class="btn-group">
                         <button type="button" class="btn btn-outline-secondary shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                             <img src="images/users/user1.png" style="width:30px; height: 30px;" class="me-1">
-                            
+                            $_SESSION[uName]
                         </button>
                             <ul class="dropdown-menu dropdown-menu-lg-end">
                                 <li><a class="dropdown-item" href="profile.php">Profile</a></li>
