@@ -29,6 +29,22 @@ function toggle_status(id, val) {
     xhr.send('toggle_status=' + id + '&value=' + val);
 }
 
+function toggle_verify(id, val) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "ajax/users.php", true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function() {
+        if (this.responseText == 1) {
+            alert('success', 'Verify toggled!');
+            get_users();
+        } else {
+            alert('success', 'Server Down!');
+        }
+    }
+    xhr.send('toggle_verify=' + id + '&value=' + val);
+}
+
 function remove_user(user_id)
 {
     if(confirm("Are you sure, you want to delete this user?"))
