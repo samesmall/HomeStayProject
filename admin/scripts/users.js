@@ -29,6 +29,8 @@ function toggle_status(id, val) {
     xhr.send('toggle_status=' + id + '&value=' + val);
 }
 
+
+
 function remove_user(user_id)
 {
     if(confirm("Are you sure, you want to delete this user?"))

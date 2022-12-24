@@ -32,14 +32,23 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
             </ul>
             <div class="d-flex">
                 <?php 
-                 if(isset($_SESSION['login']) && $_SESSION['login']==true)
+                if(isset($_SESSION['login']) && $_SESSION['login']==true)
                  {
                   echo<<<data
-                 
-                data;
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-secondary shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                            <img src="images/users/user1.png" style="width:30px; height: 30px;" class="me-1">
+                            
+                        </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                                <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="bookings.php">Booking</a></li>
+                                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                            </ul>
+                        </div>
+                    data;
                
-                 }
-                 else{
+                 }else{
                     echo<<<data
                         <button type="button" class="btn btn-sm text-white btn-danger shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Login
@@ -47,17 +56,7 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                         <button type="button" class="btn btn-sm text-white btn-success shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#registerModal">
                             Register
                         </button>
-                    <div class="btn-group">
-                    <button type="button" class="btn btn-outline-secondary shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                       <img src="images/users/user1.png" style="width:30px; height: 30px;" clas="me-1">
-                      
-                    </button>
-                        <ul class="dropdown-menu dropdown-menu-lg-end">
-                            <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                            <li><a class="dropdown-item" href="bookings.php">Booking</a></li>
-                            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-                        </ul>
-                    </div>
+                       
                     data;
                  }
                 ?>
@@ -159,9 +158,13 @@ $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
                                 <label class="form-label">Phone Number</label>
                                 <input name="phonenum" type="text" class="form-control shadow-none" required>
                             </div>
-                            <div class="col-md-6 p-0 ">
+                            <!-- <div class="col-md-6 p-0 ">
                                 <label class="form-label">Picture</label>
                                 <input name="profile" type="file" accept=".jpg, .jpeg, .png, .webp" class="form-control shadow-none">
+                            </div> -->
+                            <div class="col-md-6 ps-0 mb-3">
+                                <label class="form-label">Address</label>
+                                <textarea name="address" class="form-control shadow-none" rows="1" required></textarea>
                             </div>
                             <div class="col-md-6 ps-0 mb-3">
                                 <label class="form-label">Password</label>
