@@ -38,7 +38,7 @@ adminLogin();
                     <div class="mt-3 table-responsive" style="border-radius: 10px;background:white">
                         <table class="table table-hover border" style="width: 100%">
                             <thead>
-                                <tr class="text-dark " style="">
+                                <tr class="text-dark " >
                                     <th scope="col-sm">ID</th>
                                     <th scope="col-sm">Name</th>
                                     <th scope="col-sm">Email</th>
