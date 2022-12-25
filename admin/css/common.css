@@ -11,6 +11,11 @@
   font-family: "Merienda", cursive;
 }
 
+.a-font{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -69,3 +74,8 @@ input[type="number"] {
     margin-top: 60px;
   }
 }
+
+.titile-dashbroad{
+  color: linear-gradient(to right, #da8cff, #9a55ff);
+}
+

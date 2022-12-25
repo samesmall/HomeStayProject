@@ -19,17 +19,17 @@ if(isset($_POST['get_users']))
     $del_btn = "<button type='button' onclick='remove_user($row[id])' class='btn btn-danger shadow-none btn-sm'>
     <i class='bi bi-trash'></i>
     </button>";
-    $verified = "<button onclick='toggle_verify($row[id],0)' class='btn btn-sm btn-success text-white shadow-none'><i class='bi bi-check-lg'></i></button>";
+    $verified = "<button onclick='toggle_verify($row[id],0)' class='btn btn-sm text-white shadow-none' style='background:rgba(88, 151, 66, 1)'><i class='bi bi-check-lg'></i></button>";
 
     if(!$row['is_verified']){
-        $verified = "<button onclick='toggle_verify($row[id],1)' class='btn btn-sm btn-danger text-white shadow-none'><i class='bi bi-x-lg'></i></button>";
+        $verified = "<button onclick='toggle_verify($row[id],1)' class='btn btn-sm text-white shadow-none bg-danger'><i class='bi bi-x-lg'></i></button>";
         $del_btn ="";
     }
 
-    $status = "<button onclick='toggle_status($row[id],0)' class='btn btn-sm btn-success text-white shadow-none'>active</button>";
+    $status = "<button onclick='toggle_status($row[id],0)' class='btn btn-sm text-white shadow-none' style='background:rgba(88, 151, 66, 1)'>active</button>";
 
     if(!$row['status']){
-        $status = "<button onclick='toggle_status($row[id],1)' class='btn btn-sm btn-danger text-white shadow-none'>inactive</button>";
+        $status = "<button onclick='toggle_status($row[id],1)' class='btn btn-sm text-white shadow-none bg-danger'>inactive</button>";
     }
     $date = date("d-m-Y : H:m:s",strtotime($row['datentime']));
     $data.="
