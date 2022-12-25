@@ -75,7 +75,11 @@ input[type="number"] {
   }
 }
 
-.titile-dashbroad{
+.title-dashbroad{
   color: linear-gradient(to right, #da8cff, #9a55ff);
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color:white;
+  background-color: #9a55ff;
+}

@@ -48,4 +48,8 @@ input::-webkit-inner-spin-button {
 }
  
 
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  background-color: #209db5;
+  color: aliceblue;
+}
 
