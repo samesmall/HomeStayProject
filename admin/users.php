@@ -25,27 +25,28 @@ adminLogin();
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4"><i class="bi bi-person-circle text-primary"></i> USERS</h3>
 
             <!-- features section -->
-            <div class="card border-0 shadow-sm mb-4">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
                 <div class="card-body">
 
-                    <div class="text-end mb-3">
-                        <input type="text" oninput="search_user(this.value)" class="form-control shadow-none w-25 ms-auto" placeholder="Search By Name"> 
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">USERS</h3>
+                        <input type="text" oninput="search_user(this.value)" class="form-control shadow-none w-25" placeholder="Search By Name">
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover border text-center" style="min-width: 1300px;">
+
+                    <div class="mt-3 table-responsive" style="border-radius: 10px;background:white">
+                        <table class="table table-hover border" style="width: 100%">
                             <thead>
-                                <tr class="bg-dark text-light">
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Verified</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Action</th>
+                                <tr class="text-dark " style="">
+                                    <th scope="col-sm">ID</th>
+                                    <th scope="col-sm">Name</th>
+                                    <th scope="col-sm">Email</th>
+                                    <th scope="col-sm">Phone</th>
+                                    <th scope="col-sm">Verified</th>
+                                    <th scope="col-sm">Status</th>
+                                    <th scope="col-sm">Date</th>
+                                    <th scope="col-sm">Action</th>
                                 </tr>
                             </thead>
                             <tbody id="users-data">
@@ -59,7 +60,7 @@ adminLogin();
     </div>
     </div>
 
-   
+
 
     <?php require('inc/scripts.php') ?>
     <script src="scripts/users.js"></script>
