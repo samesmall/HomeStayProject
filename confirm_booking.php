@@ -147,13 +147,14 @@
 
                  let data = new FormData();
                  data.append('check_availability','');
-                 data.append('checkin',checkin_val);
+                 data.append('check_in',checkin_val);
                  data.append('check_out',checkout_val);
                
                let xhr = new XMLHttpRequest();
-               xhr.open("POST", "ajax/confirm_booking.php", true);
+               xhr.open("POST","ajax/confirm_booking.php",true);
 
-               xhr.onload = function() {
+               xhr.onload = function() 
+               {
                 let data = JSON.parse(this.responseText);
                 if(data.status == 'check_in_out_equal'){
                     pay_info.innerText="You cannot check-out on the same day!";

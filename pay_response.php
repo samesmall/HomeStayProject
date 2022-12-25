@@ -2,8 +2,8 @@
 require('admin/inc/db_config.php');
 require('admin/inc/essentials.php');
 
-require('inc/paytm/config_paytm.php');
-require('inc/paytm/encdec_paytm.php');
+ //require('inc/paytm/config_paytm.php');
+// require('inc/paytm/encdec_paytm.php');
 
 date_default_timezone_set("Asia/kolkata");
 session_start();
@@ -16,7 +16,7 @@ function regenrate_session($uid){
   $_SESSION['login'] = true;
   $_SESSION['uId'] = $user_fetch['id'];
   $_SESSION['uName'] = $user_fetch['name'];
-  $_SESSION['uPic'] = $user_fetch['profile'];
+  //$_SESSION['uPic'] = $user_fetch['profile'];
   $_SESSION['uPhone'] = $user_fetch['phonenum'];
 
 }
@@ -33,7 +33,7 @@ $isValidChecksum = "FALSE";
 $paramList = $_POST;
 $paytmChecksum = isset($_POST["CHECKSUMHASH"]) ? $_POST["CHECKSUMHASH"]:"";//sent by Paytm pg
 
-$isValidChecksum = verifychecksum_e($paramList, PAYTM_MERCHANT_KEY,$paytmChecksum);
+//$isValidChecksum = verifychecksum_e($paramList, PAYTM_MERCHANT_KEY,$paytmChecksum);
 
 if($isValidChecksum == "TRUE")
 {

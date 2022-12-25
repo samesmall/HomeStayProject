@@ -5,8 +5,8 @@ require('../admin/inc/essentials.php');
 
 date_default_timezone_set("Asia/kolkata");
 
-if(isset($_POST['check_availibility']))
-{
+if(isset($_POST['check_availability']))
+{                
     $frm_data = filteration($_POST);
     $status = "";
     $result = "";
@@ -28,7 +28,7 @@ if(isset($_POST['check_availibility']))
         $result = json_encode(["status"=>$status]);
     }
     else if ($checkin_date < $today_date){
-        $status = 'check_out_earlier';  
+        $status = 'check_in_earlier';  
         $result = json_encode(["status"=>$status]);
     }
 
@@ -51,5 +51,7 @@ if(isset($_POST['check_availibility']))
         $result = json_encode(["status"=>'available',"days"=>$count_days, "payment"=> $payment]);
         echo $result;
     }
+
+    
 }
 ?>
