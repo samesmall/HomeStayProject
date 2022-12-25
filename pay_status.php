@@ -29,9 +29,9 @@
             }
             $booking_q ="SELECT bo.*,bd.* FROM `booking_order` bo 
             INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
-            WHERE bo.oder_id=? AND bo.user_id=? AND bo.booking_status!=?";
+            WHERE bo.order_id=? AND bo.user_id=? AND bo.booking_status!=?";
 
-            $booking_res = select($booking_q,[$frm_data['order'],$_SESSION['uId'],'pending'],'sis');
+            $booking_res = select($booking_q,[$frm_data['order_id'],$_SESSION['uId'],'pending'],'sis');
 
             if(mysqli_num_rows($booking_res)==0){
                 redirect('index.php');
@@ -68,7 +68,7 @@
                
             </div>
             
-            <div class="col-lg-5 col-md-12 px-4">
+            <!-- <div class="col-lg-5 col-md-12 px-4">
                 <div class="card mb-4 border-0 shadow-sm rounded-3">
                     <div class="card-body">
                         <form action="pay_now.php" method="POST" id="booking_form">
@@ -106,14 +106,14 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
        
         </div>
         </div>
         <!-- footer -->
         <?php require('inc/footer.php') ?>
-        <script>
+        <!-- <script>
             let booking_form = document.getElementById('booking_form');
             let info_loader = document.getElementById('info_loader');
             let pay_info = document.getElementById('pay_info');
@@ -139,6 +139,7 @@
 
                xhr.onload = function() {
                 let data = JSON.parse(this.responseText);
+                console.log(this.responseText);
                 if(data.status == 'check_in_out_equal'){
                     pay_info.innerText="You cannot check-out on the same day!";
                 }
@@ -163,7 +164,7 @@
             }
         }
             
-        </script>
+        </script> -->
 </body>
 
 </html>
