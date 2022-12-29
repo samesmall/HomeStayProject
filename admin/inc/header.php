@@ -21,25 +21,25 @@
                         <a class="nav-link border mt-2" style="color: black; background:rgba(161, 174, 175, 1)" href="dashboard.php"><i class="bi bi-table"></i> Dashboard</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="new_bookings.php"><i class="bi bi-table"></i> Bookings</a>
+                        <a class="nav-link border mt-2 text-dark"  href="new_bookings.php"><i class="bi bi-table"></i> Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="users.php"><i class="bi bi-person-circle"></i> Users</a>
+                        <a class="nav-link border mt-2 text-dark"  href="users.php"><i class="bi bi-person-circle"></i> Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="user_queries.php"><i class="bi bi-people"></i> User_queries</a>
+                        <a class="nav-link border mt-2 text-dark"  href="user_queries.php"><i class="bi bi-people"></i> User_queries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="rooms.php"><i class="bi bi-hospital"></i> Rooms</a>
+                        <a class="nav-link border mt-2 text-dark"  href="rooms.php"><i class="bi bi-hospital"></i> Rooms</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="features_facilities.php"><i class="bi bi-card-checklist"></i> Features & Facilities</a>
+                        <a class="nav-link border mt-2 text-dark"  href="features_facilities.php"><i class="bi bi-card-checklist"></i> Features & Facilities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="carousel.php"><i class="bi bi-file-image"></i> Carousel</a>
+                        <a class="nav-link border mt-2 text-dark"  href="carousel.php"><i class="bi bi-file-image"></i> Carousel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2"  href="settings.php"><i class="bi bi-gear"></i> Settings</a>
+                        <a class="nav-link border mt-2 text-dark"  href="settings.php"><i class="bi bi-gear"></i> Settings</a>
                     </li>
                 </ul>
             </div>

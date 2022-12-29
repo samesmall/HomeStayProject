@@ -83,10 +83,11 @@ input[type="number"] {
 
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: white;
-  background-color: gray;
+  color: rgb(255, 255, 255);
+  background-color: rgb(90, 133, 144);
 }
 
 .nav-link:focus, .nav-link:hover {
   color: black;
 }
+
