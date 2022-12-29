@@ -39,7 +39,7 @@ adminLogin();
                         <table class="table table-hover border" style="width: 100%">
                             <thead>
                                 <tr class="text-dark ">
-                                    <th scope="col-sm">ID</th>
+                                    <th scope="col-sm" style="padding-left: 20px">ID</th>
                                     <th scope="col-sm">User Details</th>
                                     <th scope="col-sm">Room Details</th>
                                     <th scope="col-sm">Bookings Details</th>

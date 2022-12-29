@@ -22,7 +22,7 @@ if (isset($_POST['get_features'])) {
   while ($row = mysqli_fetch_assoc($res)) {
     echo <<<data
           <tr>
-          <td>$i</td>
+          <td style='padding-left: 20px'>$i</td>
           <td>$row[name]</td>
           <td>
             <button type="button" onclick="rem_feature($row[id])" class="btn btn-danger btn-sm shadow-none">
@@ -74,7 +74,7 @@ if (isset($_POST['get_facilities'])) {
   while ($row = mysqli_fetch_assoc($res)) {
     echo <<<data
           <tr class='align-middle'>
-          <td>$i</td>
+          <td style='padding-left: 20px'>$i</td>
           <td><img src="$path$row[icon]" width="100px"</td>
           <td>$row[name]</td>
           <td>$row[description]</td>

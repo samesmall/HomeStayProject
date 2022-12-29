@@ -35,6 +35,8 @@ input[type="number"] {
   border-color: var(--teal_hover);
 }
 
+
+
 .h-line{
   width: 150px;
   height: 1.7px;
@@ -79,7 +81,12 @@ input[type="number"] {
   color: linear-gradient(to right, #da8cff, #9a55ff);
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  color:white;
-  background-color: #9a55ff;
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: white;
+  background-color: gray;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: black;
 }

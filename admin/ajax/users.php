@@ -34,7 +34,7 @@ if(isset($_POST['get_users']))
     $date = date("d-m-Y : H:m:s",strtotime($row['datentime']));
     $data.="
     <tr>
-        <td>$i</td>
+        <td style='padding-left: 20px'>$i</td>
         <td>$row[name]</td>
         <td>$row[email]</td>
         <td>$row[phonenum]</td>
