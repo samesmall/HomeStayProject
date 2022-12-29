@@ -24,23 +24,33 @@ adminLogin();
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4"><i class="bi bi-gear text-primary"></i>  SETTINGS</h3>
-
 
             <!-- General settings section -->
 
-            <div class="card border-0 shadow-sm mb-4">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
                 <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="card-title m-0">Genaral Settings</h5>
+
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">SETTINGS</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
+                <div class="card-body">
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h5 class="card-title m-0" style="font-weight: 700;">Genaral Settings</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#general-s">
                             <i class="bi bi-pencil-square"></i> Edit
                         </button>
                     </div>
-                    <h6 class="card-subtitle mb-1 fw-bold">Site Title</h6>
-                    <p class="card-text" id="site_title"></p>
-                    <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
-                    <p class="card-text" id="site_about"></p>
+                </div>
+                <div class="mb-3" style="border-radius: 10px;background:white; width:98%; margin: 0 auto;">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-1 fw-bold">Site Title</h6>
+                        <p class="card-text" id="site_title"></p>
+                        <h6 class="card-subtitle mb-1 fw-bold">About us</h6>
+                        <p class="card-text" id="site_about"></p>
+                    </div>
                 </div>
             </div>
 
@@ -75,32 +85,35 @@ adminLogin();
             </div>
 
             <!-- Shutdown section -->
-            <div class="card border-0 shadow-sm">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
                 <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="card-title m-0">Shutdown Website</h5>
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h5 class="card-title m-0" style="font-weight: 700;">Shutdown Website</h5>
                         <div class="form-check form-switch">
                             <form>
                                 <input onchange="upd_shutdown(this.value)" class="form-check-input" type="checkbox" id="shutdown-toggle">
                             </form>
                         </div>
                     </div>
-
-                    <p class="card-text" id="site_about">
-                        No customer will be alowed to book hotel room, when shutdown mode is turn on.
-                    </p>
+                    <div class="mt-2" style="border-radius: 5px;background:white; margin: 0 auto;">
+                        <p class="card-text" id="site_about" style="margin-left: 15px">
+                            No customer will be alowed to book hotel room, when shutdown mode is turn on.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <!-- Contact details section -->
-            <div class="card border-0 shadow-sm mb-4">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
                 <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="card-title m-0">Contacts Settings</h5>
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h5 class="card-title m-0" style="font-weight: 700;">Contacts Settings</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#contacts-s">
                             <i class="bi bi-pencil-square"></i> Edit
                         </button>
                     </div>
+                </div>
+                <div class="mb-3" style="border-radius: 10px;background:white; width:98%; margin: 0 auto; padding: 15px">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="mb-4">
@@ -153,76 +166,76 @@ adminLogin();
                 </div>
             </div>
 
-            
-                    <!-- contacts details modal -->
 
-                    <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <form id="contacts_s_form">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Contacts Settings</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container-fluid p-0">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label class="form-label fw-bold">Address</label>
-                                                        <input type="text" name="address" id="address_inp" class="form-control shadow-none" required>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label class="form-label fw-bold">Google Map Link</label>
-                                                        <input type="text" name="gmap" id="gmap_inp" class="form-control shadow-none" required>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label class="form-label fw-bold">Phone Number (with contry code)</label>
-                                                        <div class="input-group mb-3">
-                                                             <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                             <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
-                                                        </div>
-                                                        <div class="input-group mb-3">
-                                                             <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                                             <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label class="form-label fw-bold">Email</label>
-                                                        <input type="email" name="email" id="email_inp" class="form-control shadow-none" required>
-                                                    </div>
+            <!-- contacts details modal -->
+
+            <div class="modal fade" id="contacts-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <form id="contacts_s_form">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Contacts Settings</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Address</label>
+                                                <input type="text" name="address" id="address_inp" class="form-control shadow-none" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Google Map Link</label>
+                                                <input type="text" name="gmap" id="gmap_inp" class="form-control shadow-none" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Phone Number (with contry code)</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                                    <input type="text" name="pn1" id="pn1_inp" class="form-control shadow-none" required>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                                    <input type="text" name="pn2" id="pn2_inp" class="form-control shadow-none" required>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Email</label>
+                                                <input type="email" name="email" id="email_inp" class="form-control shadow-none" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Social Links</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-facebook"></i></span>
+                                                    <input type="text" name="fb" id="fb_inp" class="form-control shadow-none" required>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-instagram"></i></span>
+                                                    <input type="text" name="insta" id="insta_inp" class="form-control shadow-none" required>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text"><i class="bi bi-twitter"></i></span>
+                                                    <input type="text" name="tw" id="tw_inp" class="form-control shadow-none" required>
+                                                </div>
                                                 <div class="mb-3">
-                                                        <label class="form-label fw-bold">Social Links</label>
-                                                        <div class="input-group mb-3">
-                                                             <span class="input-group-text"><i class="bi bi-facebook"></i></span>
-                                                             <input type="text" name="fb" id="fb_inp" class="form-control shadow-none" required>
-                                                        </div>
-                                                        <div class="input-group mb-3">
-                                                             <span class="input-group-text"><i class="bi bi-instagram"></i></span>
-                                                             <input type="text" name="insta" id="insta_inp" class="form-control shadow-none" required>
-                                                        </div>
-                                                        <div class="input-group mb-3">
-                                                             <span class="input-group-text"><i class="bi bi-twitter"></i></span>
-                                                             <input type="text" name="tw" id="tw_inp" class="form-control shadow-none" required>
-                                                        </div>
-                                                        <div class="mb-3">
-                                                        <label class="form-label fw-bold">iFrame Src</label>
-                                                        <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required>
-                                                    </div>
-                                                    </div>
+                                                    <label class="form-label fw-bold">iFrame Src</label>
+                                                    <input type="text" name="iframe" id="iframe_inp" class="form-control shadow-none" required>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                        <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
-                                    </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="contacts_inp(contacts_data)" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -230,7 +243,7 @@ adminLogin();
     </div>
 
     <?php require('inc/scripts.php') ?>
-    <script src="scripts/settings.js" ></script>  
+    <script src="scripts/settings.js"></script>
 
 </body>
 

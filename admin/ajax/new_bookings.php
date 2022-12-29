@@ -18,7 +18,7 @@ if(isset($_POST['get_bookings']))
    $table_data = "";
 
    if(mysqli_num_rows($res)==0){
-    echo "<b>No Data Found!</b>";
+    echo "<b style='padding-left: 20px'>No Data Found!</b>";
     exit();
    }
    while ($data = mysqli_fetch_assoc($res))
@@ -28,7 +28,7 @@ if(isset($_POST['get_bookings']))
     $checkout = date("d-m-Y",strtotime($data['check_out']));
     $table_data .="
     <tr>
-        <td>$i</td>
+        <td style='padding-left: 20px'>$i</td>
         <td>
             <span class='badge bg-primary'>
                Order ID: $data[order_id]

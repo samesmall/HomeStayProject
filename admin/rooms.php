@@ -22,42 +22,44 @@ adminLogin();
 
     <?php require('inc/header.php') ?>
 
-    <div class="container-fluid" id="main-content">
+    <div class="col-lg-10 ms-auto p-4 overflow-hidden">
 
-        <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4"><i class="bi bi-hospital text-primary"></i> ROOMS</h3>
+        <!-- features section -->
+        <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
+            <div class="card-body">
 
-            <!-- features section -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body">
-
+                <div class="d-flex align-self-center justify-content-between">
+                    <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">ROOMS</h3>
                     <div class="text-end mb-3">
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#add-room">
                             <i class="bi bi-plus-square"></i> Add
                         </button>
                     </div>
-                    <div class="table-responsive-lg" style="height:450px; overflow-y: scroll;">
-                        <table class="table table-hover border text-center">
-                            <thead>
-                                <tr class="bg-dark text-light">
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Area</th>
-                                    <th scope="col">Guests</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody id="room-data">
-                            </tbody>
+                </div>
 
-                        </table>
-                    </div>
+                <!--  overflow-y: scroll; -->
+                <div class="table-responsive-lg" style="height:450px;border-radius: 10px;background:white">
+                    <table class="table table-hover border" style="width: 100%">
+                        <thead>
+                            <tr class="text-dark">
+                                <th scope="col-sm" style="padding-left: 20px">ID</th>
+                                <th scope="col" style="width: 20%">Name</th>
+                                <th scope="col-sm">Area</th>
+                                <th scope="col-sm">Guests</th>
+                                <th scope="col-sm">Price</th>
+                                <th scope="col-sm">Quantity</th>
+                                <th scope="col-sm">Status</th>
+                                <th scope="col-sm">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="room-data">
+                        </tbody>
+
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     </div>
     </div>
@@ -259,7 +261,7 @@ adminLogin();
                     <div class="table-responsive-lg" style="height:350px; overflow-y: scroll;">
                         <table class="table table-hover border text-center">
                             <thead>
-                                <tr class="bg-dark text-light sticky-top" >
+                                <tr class="bg-dark text-light sticky-top">
                                     <th scope="col" width="60%">Image</th>
                                     <th scope="col">Thumb</th>
                                     <th scope="col">Delete</th>

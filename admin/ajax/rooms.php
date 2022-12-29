@@ -76,7 +76,7 @@ if(isset($_POST['get_all_rooms']))
 
     $data.="
     <tr class='align-middle'>
-        <td>$i</td>
+        <td style='padding-left: 20px'>$i</td>
         <td>$row[name]</td>
         <td>
         <div class='row'>

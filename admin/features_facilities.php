@@ -61,51 +61,58 @@ if (isset($_GET['del'])) {
 <body class="bg-light">
 
     <?php require('inc/header.php') ?>
-
+    
     <div class="container-fluid" id="main-content">
 
         <div class="col-lg-10 ms-auto p-4 overflow-hidden">
-            <h3 class="mb-4"><i class="bi bi-card-checklist text-primary"></i> FEATURES & FACILITIES</h3>
 
             <!-- features section -->
-            <div class="card border-0 shadow-sm mb-4">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1)">
                 <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="card-title m-0">Features</h5>
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">FEATURES & FACILITIES</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1);">
+                <div class="card-body">
+                    <div class="d-flex align-self-center justify-content-between">
+                        <h5 class="card-title m-0 pt-2" style="font-weight: 700;">Features</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#feature-s">
                             <i class="bi bi-plus-square"></i> Add
                         </button>
                     </div>
-                    <div class="table-responsive-md" style="height:350px; overflow-y: scroll;">
-                        <table class="table table-hover border">
-                            <thead>
-                                <tr class="bg-dark text-light">
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody id="features-data">
-                            </tbody>
+                <div class="table-responsive-md mt-3" style="border-radius: 10px;background:white">
+                    <table class="table table-hover border" style="width: 100%">
+                        <thead>
+                            <tr class="text-dark">
+                                <th scope="col-sm" style="padding-left: 20px">ID</th>
+                                <th scope="col-sm">Name</th>
+                                <th scope="col-sm">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="features-data">
+                        </tbody>
 
-                        </table>
-                    </div>
+                    </table>
+                </div>
                 </div>
             </div>
+
             <!-- facilities section -->
-            <div class="card border-0 shadow-sm mb-4">
+            <div class="card border-0 shadow-sm mb-4" style="background:rgba(231, 231, 231, 1);">
                 <div class="card-body">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="card-title m-0">Facilities</h5>
+                        <h5 class="card-title m-0 pt-2" style="font-weight: 700;">Facilities</h5>
                         <button type="button" class="btn btn-dark shadow-none btn-sm" data-bs-toggle="modal" data-bs-target="#facility-s">
                             <i class="bi bi-plus-square"></i> Add
                         </button>
                     </div>
-                    <div class="table-responsive-md" style="height:350px; overflow-y: scroll;">
-                        <table class="table table-hover border">
+                    <div class="table-responsive-md mt-3" style="border-radius: 10px; background:white">
+                        <table class="table table-hover border" style="width: 100%">
                             <thead>
-                                <tr class="bg-dark text-light">
-                                    <th scope="col">ID</th>
+                                <tr class="text-dark">
+                                    <th scope="col" style="padding-left: 20px">ID</th>
                                     <th scope="col">Icon</th>
                                     <th scope="col">Name</th>
                                     <th scope="col" width="40%">Description</th>
@@ -181,9 +188,9 @@ if (isset($_GET['del'])) {
 
     <?php require('inc/scripts.php') ?>
     <script src="scripts/features_facilities.js"></script>
-     
 
-   
+
+
 </body>
 
 </html>

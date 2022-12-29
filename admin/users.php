@@ -39,7 +39,7 @@ adminLogin();
                         <table class="table table-hover border" style="width: 100%">
                             <thead>
                                 <tr class="text-dark " >
-                                    <th scope="col-sm">ID</th>
+                                    <th scope="col-sm" style="padding-left: 20px">ID</th>
                                     <th scope="col-sm">Name</th>
                                     <th scope="col-sm">Email</th>
                                     <th scope="col-sm">Phone</th>
