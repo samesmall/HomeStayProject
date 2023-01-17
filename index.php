@@ -42,7 +42,7 @@
                      $path = CAROUSEL_IMG_PATH;
                      echo <<<data
                      <div class="swiper-slide">
-                     <img src="$path$row[image]" class=" d-block" height="500px;" width="100%"/>
+                     <img src="$path$row[image]" class=" d-block" height="500px;" width="100%" style="object-fit: cover;"/>
                     </div>
                  data;
                  }
@@ -52,7 +52,7 @@
     </div>
 
     <!-- Check availability form -->
-    <div class="container availability-form">
+    <!-- <div class="container availability-form">
         <div class="row">
             <div class="col-lg-12 bg-white shadow p-4 rounded">
                 <h5 class="mb-4">Check Booking Availability</h5>
@@ -89,7 +89,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Our Rooms -->
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">OUR ROOMS</h2>

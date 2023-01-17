@@ -115,7 +115,7 @@
                                          <span class="visually-hidden">Loading...</span>
                                     </div>
                                     <h6 class="mb-3 text-danger" id="pay_info">Provide check-in & check-out date!</h6>
-                                  <button name="pay_now" class="btn w-100 text-white custom-bg shadow-none mb-1" disabled>Play_Now</button>
+                                  <button name="pay_now" class="btn w-100 text-white custom-bg shadow-none mb-1" disabled>Pay_Now</button>
                                   </div>
             
                               </div>

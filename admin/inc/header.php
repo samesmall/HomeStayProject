@@ -27,7 +27,7 @@
                         <a class="nav-link border mt-2 text-dark"  href="users.php"><i class="bi bi-person-circle"></i> Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2 text-dark"  href="user_queries.php"><i class="bi bi-people"></i> User_queries</a>
+                        <a class="nav-link border mt-2 text-dark"  href="user_queries.php"><i class="bi bi-people"></i> User_contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link border mt-2 text-dark"  href="rooms.php"><i class="bi bi-hospital"></i> Rooms</a>
