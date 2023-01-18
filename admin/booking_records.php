@@ -12,7 +12,7 @@ adminLogin();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - New Bookings</title>
+    <title>Admin Panel - Bookings Records</title>
     <?php require('inc/link.php'); ?>
     <?php require('inc/scripts.php'); ?>
 
@@ -31,7 +31,7 @@ adminLogin();
                 <div class="card-body">
 
                     <div class="d-flex align-self-center justify-content-between">
-                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">NEW BOOKINGS</h3>
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">BOOKING RECORDS</h3>
                         <input type="text" oninput="get_bookings(this.value)" class="form-control shadow-none w-25" placeholder="Search By Name">
                     </div>
 
@@ -88,7 +88,7 @@ adminLogin();
 
 
     <?php require('inc/scripts.php') ?>
-    <script src="scripts/new_bookings.js"></script>
+    <script src="scripts/booking_records.js"></script>
 </body>
 
 </html>
