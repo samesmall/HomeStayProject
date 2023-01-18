@@ -12,7 +12,7 @@ adminLogin();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel -Refund Bookings</title>
+    <title>Admin Panel - Bookings Records</title>
     <?php require('inc/link.php'); ?>
     <?php require('inc/scripts.php'); ?>
 
@@ -31,7 +31,7 @@ adminLogin();
                 <div class="card-body">
 
                     <div class="d-flex align-self-center justify-content-between">
-                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">REFUND BOOKINGS</h3>
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">BOOKING RECORDS</h3>
                         <input type="text" oninput="get_bookings(this.value)" class="form-control shadow-none w-25" placeholder="Search By Name">
                     </div>
 
@@ -42,7 +42,7 @@ adminLogin();
                                     <th scope="col-sm" style="padding-left: 20px">ID</th>
                                     <th scope="col-sm">User Details</th>
                                     <th scope="col-sm">Room Details</th>
-                                    <th scope="col-sm">Refund Amount</th>
+                                    <th scope="col-sm">Bookings Details</th>
                                     <th scope="col-sm">Action</th>
                                 </tr>
                             </thead>
@@ -59,10 +59,36 @@ adminLogin();
 
 
 
+    <!-- Assign Room Number Modal -->
+    <div class="modal fade" id="assign-room" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <form id="assign_room_form">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Assign Room</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Room Number</label>
+                            <input type="text" id="room_no" class="form-control shadow-none" required>
+                        </div>
+                        <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
+                            Note: Assign Room Number only when user has been arrived! 
+                       </span>
+                       <input type="hidden" name="booking_id">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                        <button type="submit" class="btn custom-bg text-white shadow-none">ASSIGN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     <?php require('inc/scripts.php') ?>
-    <script src="scripts/refund_bookings.js"></script>
+    <script src="scripts/booking_records.js"></script>
 </body>
 
 </html>

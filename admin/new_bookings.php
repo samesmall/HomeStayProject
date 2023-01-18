@@ -31,12 +31,12 @@ adminLogin();
                 <div class="card-body">
 
                     <div class="d-flex align-self-center justify-content-between">
-                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">New Bookings</h3>
+                        <h3 class="mt-1" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">NEW BOOKINGS</h3>
                         <input type="text" oninput="get_bookings(this.value)" class="form-control shadow-none w-25" placeholder="Search By Name">
                     </div>
 
                     <div class="mt-3 table-responsive" style="border-radius: 10px;background:white">
-                        <table class="table table-hover border" style="width: 100%">
+                        <table class="table table-hover border" style="min-width: 1200px">
                             <thead>
                                 <tr class="text-dark ">
                                     <th scope="col-sm" style="padding-left: 20px">ID</th>
