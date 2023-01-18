@@ -24,6 +24,12 @@
                         <a class="nav-link border mt-2 text-dark"  href="new_bookings.php"><i class="bi bi-table"></i> Bookings</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link border mt-2 text-dark"  href="refund_bookings.php"><i class="bi bi-table"></i> Refund_Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border mt-2 text-dark"  href="booking_records.php"><i class="bi bi-table"></i> booking_records</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link border mt-2 text-dark"  href="users.php"><i class="bi bi-person-circle"></i> Users</a>
                     </li>
                     <li class="nav-item">
