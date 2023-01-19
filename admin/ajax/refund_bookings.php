@@ -31,25 +31,25 @@ if(isset($_POST['get_bookings']))
         <td style='padding-left: 20px'>$i</td>
         <td>
             <span class='badge bg-primary'>
-               Order ID: $data[order_id]
+                $data[order_id]
             </span>
-            <br>
-            <b>Name :</b> $data[user_name]
-            <br>
-            <b>Phone No:</b> $data[phonenum]
+        </td>
+        <td>$data[user_name]</td>
+        <td>$data[phonenum]</td>
+            
+        <td>
+             $data[room_name]
         </td>
         <td>
-            <b>Room:</b> $data[room_name]
-            <br>
-            <b>Check in:</b> $checkin
-            <br>
-            <b>Check out:</b> $checkout
-            <br>
-        
-            <b>Date:</b> $date
+        <b>Check in:</b> $checkin
+        <br>
+        <b>Check out:</b> $checkout
         </td>
         <td>
-        <b>$data[trans_amt]</b>
+        <b>$data[total_pay] vnd</b>
+        </td>         
+        <td>
+             $date
         </td>
         <td>
             <button type='button' onclick='refund_booking($data[booking_id])' class=' btn btn-success btn-sm fw-bold shadow-none'>

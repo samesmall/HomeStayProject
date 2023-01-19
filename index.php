@@ -222,7 +222,7 @@
     </div>
 
     <!-- Testimonials -->
-    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">TESTIMONIALS</h2>
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Member</h2>
 
     <div class="container mt-5">
         <!-- Swiper -->
@@ -230,13 +230,16 @@
             <div class="swiper-wrapper mb-5">
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/star.png" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
+                        <img src="images/users/same.jpg" width="150px" height="150px">
+                        <h6 class="m-0 ms-2">Mr Same</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Quo neque recusandae maiores adipisci necessitatibus eos, eveniet esse fugiat laudantium voluptatum in,
-                        voluptate voluptatem sint est cupiditate ab tempore id. Distinctio.
+                        Job: Web developer (PHP & javascript)
+                       </br>
+                        Study: University of Phu yen 
+                       </br>
+                        Age: 23 
+             
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
@@ -248,13 +251,15 @@
 
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/star.png" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
+                        <img src="images/users/noy.jpg" width="150px" height="150px">
+                        <h6 class="m-0 ms-2">Miss Noy</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Quo neque recusandae maiores adipisci necessitatibus eos, eveniet esse fugiat laudantium voluptatum in,
-                        voluptate voluptatem sint est cupiditate ab tempore id. Distinctio.
+                       Job: Font-end developer (Vue & javascript)
+                       </br>
+                        Study: University of Phu yen 
+                       </br>
+                        Age: 22 
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>
@@ -266,13 +271,15 @@
 
                 <div class="swiper-slide p-4">
                     <div class="profile d-flex align-items-center pb-3">
-                        <img src="images/features/star.png" width="30px">
-                        <h6 class="m-0 ms-2">Random user1</h6>
+                        <img src="images/users/khuong.jpg" width="150px" height="150px">
+                        <h6 class="m-0 ms-2">Miss Khuong</h6>
                     </div>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Quo neque recusandae maiores adipisci necessitatibus eos, eveniet esse fugiat laudantium voluptatum in,
-                        voluptate voluptatem sint est cupiditate ab tempore id. Distinctio.
+                       Job: Tester (Website)
+                       </br>
+                        Study: University of Phu yen 
+                       </br>
+                        Age: 22 
                     </p>
                     <div class="rating">
                         <i class="bi bi-star-fill text-warning"></i>

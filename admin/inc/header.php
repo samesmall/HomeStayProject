@@ -21,13 +21,22 @@
                         <a class="nav-link border mt-2" style="color: black; background:rgba(161, 174, 175, 1)" href="dashboard.php"><i class="bi bi-table"></i> Dashboard</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link border mt-2 text-dark"  href="new_bookings.php"><i class="bi bi-table"></i> Bookings</a>
+                     <button class="btn px-3 w-100 shadow-none text-start d-flex align-items-center">
+                     <span><i class="bi bi-clipboard"></i> Bookings</span>
+                     </button>
+                    <div class="collapse show px-3 small mb-1" id="bookingLinks">
+                    <ul class="nav nav-pills flex-column rounded border border-secondary">
+                    <li class="nav-item">
+                        <a class="nav-link border mt-2 text-dark"  href="new_bookings.php"><i class="bi bi-clipboard2-minus"></i> New_Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2 text-dark"  href="refund_bookings.php"><i class="bi bi-table"></i> Refund_Bookings</a>
+                        <a class="nav-link border mt-2 text-dark"  href="refund_bookings.php"><i class="bi bi-clipboard2-x"></i> Refund_Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link border mt-2 text-dark"  href="booking_records.php"><i class="bi bi-table"></i> booking_records</a>
+                        <a class="nav-link border mt-2 text-dark"  href="booking_records.php"><i class="bi bi-clipboard-check"></i> booking_records</a>
+                    </li>
+                    </ul>
+                    </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link border mt-2 text-dark"  href="users.php"><i class="bi bi-person-circle"></i> Users</a>

@@ -36,13 +36,17 @@ adminLogin();
                     </div>
 
                     <div class="mt-3 table-responsive" style="border-radius: 10px;background:white">
-                        <table class="table table-hover border" style="min-width: 1200px">
+                        <table class="table table-hover border" style="min-width: 1180px">
                             <thead>
                                 <tr class="text-dark ">
                                     <th scope="col-sm" style="padding-left: 20px">ID</th>
-                                    <th scope="col-sm">User Details</th>
+                                    <th scope="col-sm">Order ID</th>
+                                    <th scope="col-sm">Name </th>
+                                    <th scope="col-sm">Phone </th>
+                                    <th scope="col-sm">Room</th>
                                     <th scope="col-sm">Room Details</th>
-                                    <th scope="col-sm">Refund Amount</th>
+                                    <th scope="col-sm">Refund Money</th>
+                                    <th scope="col-sm">Date</th>
                                     <th scope="col-sm">Action</th>
                                 </tr>
                             </thead>

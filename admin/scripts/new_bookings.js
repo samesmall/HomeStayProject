@@ -26,13 +26,14 @@ assign_room_form.addEventListener('submit',function(e){
     xhr.open("POST", "ajax/new_bookings.php", true);
 
     xhr.onload = function() {
+        console.log(this.responseText);
         var myModal = document.getElementById('assign-room');
         var modal = bootstrap.Modal.getInstance(myModal);
         modal.hide();
 
         if(this.responseText==1){
             alert('success','Room Number Alloted! Booking finished!');
-            assign_room.reset();
+            assign_room_form.reset();
             get_bookings();
         }else{
             alert('error','Server Down!')

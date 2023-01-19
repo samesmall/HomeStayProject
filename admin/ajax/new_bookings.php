@@ -31,26 +31,31 @@ if(isset($_POST['get_bookings']))
         <td style='padding-left: 20px'>$i</td>
         <td>
             <span class='badge bg-primary'>
-               Order ID: $data[order_id]
+                $data[order_id]
             </span>
-            <br>
-            <b>Name :</b> $data[user_name]
-            <br>
-            <b>Phone No:</b> $data[phonenum]
         </td>
         <td>
-            <b>Room:</b> $data[room_name]
-            <br>
-            <b>Price:</b> $data[price] vnd
+         $data[user_name]
         </td>
         <td>
-            <b>Check in:</b> $checkin
-            <br>
-            <b>Check out:</b> $checkout
-            <br>
-            <b>Paid:</b> $data[trans_amt]
-            <br>
-            <b>Date:</b> $date
+        $data[phonenum]
+        </td>
+        <td>
+             $data[room_name]
+        </td>
+        <td>
+         $data[price] vnd
+        </td>
+        <td>
+        <b>Check in:</b> $checkin
+         <br>
+        <b>Check out:</b> $checkout
+        </td>
+        <td>
+         $data[total_pay] vnd
+        </td>
+        <td>
+        $date
         </td>
         <td>
             <button type='button' onclick='assign_room($data[booking_id])' class='btn text-white btn-sm fw-bold custom-bg shadow-none' data-bs-toggle='modal' data-bs-target='#assign-room'>
