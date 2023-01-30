@@ -75,7 +75,7 @@ adminLogin();
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label fw-bold">Room Number</label>
-                            <input type="text" id="room_no" class="form-control shadow-none" required>
+                            <input type="text" id="booking_status" class="form-control shadow-none" required>
                         </div>
                         <span class="badge rounded-pill bg-light text-dark mb-3 text-wrap lh-base">
                             Note: Assign Room Number only when user has been arrived! 

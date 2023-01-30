@@ -80,10 +80,10 @@ if(isset($_POST['assign_room']))
 
     $query = "UPDATE `booking_order` bo INNER JOIN `booking_details` bd 
     ON bo.booking_id = bd.booking_id
-    SET bo.arrival = ?, bd.room_no = ?
+    SET bo.arrival = ?, bo.booking_status = ? 
     WHERE bo.booking_id = ?";
 
-    $values = [1,$frm_data['room_no'],$frm_data['booking_id']];
+    $values = [1,$frm_data['booking_status'],$frm_data['booking_id']];
     $res = update($query,$values,'isi');//it will update 2 rows so it will return 2
 
     echo ($res==2) ? 1 : 0;
@@ -101,6 +101,7 @@ if(isset($_POST['cancel_booking']))
 
    echo $res;
 }
+
 
 if(isset($_POST['search_user']))
 {
