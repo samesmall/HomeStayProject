@@ -47,7 +47,7 @@ adminLogin();
                                     <th scope="col-sm">Total price</th>
                                     <th scope="col-sm">Date</th>
                                     <th scope="col-sm">Status</th>
-                                    <th scope="col-sm">Action</th>
+                                    <!-- <th scope="col-sm">Action</th> -->
                                 </tr>
                             </thead>
                             <tbody id="table-data">

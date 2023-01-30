@@ -15,7 +15,7 @@ if(isset($_POST['get_bookings']))
     $start = ($page-1)*$limit;
 
    $query = "SELECT distinct bo.* ,bd.* FROM `booking_order` bo INNER JOIN `booking_details` bd ON bo.booking_id = bd.booking_id
-   WHERE ( (bo.booking_status='pending' AND bo.arrival=1) OR (bo.booking_status='cancelled' AND bo.refund=1) OR (bo.booking_status='payment failed'))
+   WHERE ( (bo.booking_status='booked' AND bo.arrival=1) OR (bo.booking_status='pending' AND bo.arrival=1) OR (bo.booking_status='cancelled' AND bo.refund=1) OR (bo.booking_status='payment failed'))
    AND (bo.order_id LIKE ? OR bd.phonenum LIKE ? OR bd.user_name LIKE ?)
    ORDER BY bo.booking_id DESC";
 
@@ -70,14 +70,18 @@ if(isset($_POST['get_bookings']))
         <td>
         <span class='badge $status_bg'>$data[booking_status]</span>
         </td>
-        <td>
-            <button type='button' onclick='download($data[booking_id])' class='mt-2 btn btn-outline-danger btn-sm fw-bold shadow-none'>
-            <i class='bi bi-filetype-pdf'></i>
-            </button>
-        </td>
+
+
+      
     </tr>
     ";
     $i++;
+      //pdf
+//       <td>
+//       <button type='button' onclick='download($data[booking_id])' class=' btn btn-outline-success btn-sm fw-bold shadow-none'>
+//       <i class='bi bi-file-earmark-arrow-down-fill'></i>
+//       </button>
+//   </td>
    }
 
    $pagination = "";

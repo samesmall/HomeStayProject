@@ -1,6 +1,6 @@
 <div class="container-fluid p-3 d-flex align-items-center justify-content-between sticky-top" style="background:rgba(161, 174, 175, 1)">
     <h3 class="titile-dashbroad mb-0" style="font-family: 'Josefin Sans', sans-serif; color:rgba(15, 74, 78, 1); font-weight: 700;">SNK-FRESH Admin Panel</h3>
-    <a href="logout.php" class="btn btn-light btn-sm">LOG OUT</a>
+    <a href="logout.php" class="btn btn-danger btn-sm "><i class="bi bi-box-arrow-right "></i> LOG OUT</a>
 </div>
 
 <!-- Menu -->
